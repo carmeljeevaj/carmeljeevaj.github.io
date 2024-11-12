@@ -72,7 +72,10 @@ Map<String,String> questions_2 = {
   "I can be indecisive, especially under pressure":"q34",
   "I avoid taking risks, even when they could lead to growth":"q35",
   "I sometimes prioritize others' opinions over my own":"q36",
-  "I can be overly critical of myself and others":"q37"
+  "I can be overly critical of myself and others":"q37",
+  "Things are not good":"q38",
+  "Mostly I feel happy when bullying friends":"q39",
+  "I am more Egoistic person":"q40"
   
  
   };

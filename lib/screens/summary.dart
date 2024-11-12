@@ -34,6 +34,21 @@ class _SummaryPage extends State<SummaryPage> {
     if(quizController.scoresStorage.isEmpty){
       // Retrieve data on initialization
 Future.microtask(() => Get.offAllNamed('/'));  }
+else{
+  WidgetsBinding.instance.addPostFrameCallback((_){
+
+    Get.dialog(AlertDialog(
+      title: Text("Note:"),
+      content: Text("Please click on the download icon located at the right bottom of the screen and share it via whatsapp"),
+      actions: [
+            ElevatedButton(onPressed: (){
+              Get.back();
+            }, child: Text("Alright!"))
+      ],
+    ));
+
+  });
+}
   }
 
   @override

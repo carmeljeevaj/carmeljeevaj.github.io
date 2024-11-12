@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import '../components/gradient_btn.dart';
 import '../storage/storage.dart';
+import 'dialog.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -32,6 +33,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+   
       backgroundColor: Color(0XFF9C60DC),
       body: Center(
         child: Padding(
@@ -79,5 +81,4 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
-  }
-}
+  }}

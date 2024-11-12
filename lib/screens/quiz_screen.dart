@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quiz_app/screens/dialog.dart';
 import '../controllers/quiz_controller.dart';
 
 import 'package:flutter/material.dart';
@@ -31,7 +32,14 @@ String? name;
             Get.offAllNamed("/");
           }
 
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      showInformation();
+    });
+            
+
+
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -109,6 +117,8 @@ String? name;
       ),
     );
   }
+
+
 
   // Neumorphic emoji button with dynamic shadows
   Widget _neumorphicEmojiButton({required String emoji, required int value}) {
