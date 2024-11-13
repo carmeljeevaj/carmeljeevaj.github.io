@@ -80,7 +80,7 @@ String? name;
                     textAlign: TextAlign.center,
                   ),
                 )),
-            decoration: neumorphicDecoration(baseColor),
+            decoration: neumorphicQuestionDecoration(baseColor),
           ),
 
           Spacer(),
@@ -90,11 +90,14 @@ String? name;
             padding: EdgeInsets.all(12),
             height: MediaQuery.of(context).size.width < 350 ? 250 : 380,
             width: MediaQuery.of(context).size.width < 350 ? 250 : 380,
-            decoration: neumorphicDecoration(baseColor),
-            child: Obx(() => Image.asset(
-              
-              fit: BoxFit.cover,
-                '/images/${ (quizController.level.value == 1 ?  quizController.questions_1.values : quizController.questions_2.values).elementAt(quizController.currentQuestionIndex.value)}.jpg')),
+            decoration: neumorphicImageDecoration(baseColor),
+            child: Obx(() => ClipRRect(
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+              child: Image.asset(
+                
+                fit: BoxFit.cover,
+                  '/images/${ (quizController.level.value == 1 ?  quizController.questions_1.values : quizController.questions_2.values).elementAt(quizController.currentQuestionIndex.value)}.jpg'),
+            )),
           ),
 
           Spacer(),
@@ -128,6 +131,7 @@ String? name;
         padding: EdgeInsets.all(12),
         decoration: neumorphicDecoration(baseColor, shape: BoxShape.circle),
         child: Image.asset(
+          
           emoji,
           height: 40,
           width: 40,
@@ -158,6 +162,49 @@ String? name;
           offset: Offset(-5, -5),
           blurRadius: 15,
           spreadRadius: 1,
+        ),
+      ],
+    );
+  }
+
+   BoxDecoration neumorphicQuestionDecoration(Color color) {
+    return BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20)),
+      boxShadow: [
+        BoxShadow(
+          color: darkenColor(color, 0.2),
+          offset: Offset(5, 5),
+          blurRadius: 10,
+          spreadRadius: 1,
+        ),
+        BoxShadow(
+          color: lightenColor(color, 0.2),
+          offset: Offset(-5, -5),
+          blurRadius: 10,
+          spreadRadius: 1,
+        ),
+      ],
+    );
+  }
+
+  // Custom neumorphic decoration for the image container
+  BoxDecoration neumorphicImageDecoration(Color color) {
+    return BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(30), // Different border radius for image container
+      boxShadow: [
+        BoxShadow(
+          color: darkenColor(color, 0.3),
+          offset: Offset(6, 6),
+          blurRadius: 15,
+          spreadRadius: 2,
+        ),
+        BoxShadow(
+          color: lightenColor(color, 0.3),
+          offset: Offset(-6, -6),
+          blurRadius: 15,
+          spreadRadius: 2,
         ),
       ],
     );
