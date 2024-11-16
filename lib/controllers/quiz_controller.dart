@@ -28,57 +28,53 @@ class QuizController extends GetxController {
     //LEVEL 1 QUESTIONS
 
 
-  Map<String,String> questions_1 = {
-    "I am capable of achieving my goals.":"q1",
-    "I learn and grow from my experiences.":"q2",
-    "I am resilient and can handle challenges.":"q3",
-    "I bring value to the lives of others":"q4",
-    "I have talents and strengths":"q5",
-    "I am kind and compassionate person":"q6",
-    "I make a positive impact on those around me":"q7",
-    "I am worthy of love and respect":"q8",
-    "I am continuously improving and bettering myself":"q9",
-    "I am confident in my abilities": "q10",
-    "I have the power to make a difference in the world":"q11",
-    "I am grateful for who I am and What I have":"q12",
-    "I am in control of my thoughts and emotions":"q13",
-    "I radiate positivity and attract good energy":"q14",
-    "I deserve success and happiness":"q15",
-    "I embrace new opportunities":"q16",
-    "I am beautiful inside and out":"q17",
-    "I am creative and innovative":"q18",
-    "I am calm and composed under pressure":"q19",
-    "I am proud of my accomplishments":"q20"
-  };
+ Map<String, String> questions_1 = {
+  "I am capable of achieving my goals.": "q1",
+  "I learn and grow from my experiences.": "q2",
+  "I am resilient and can handle challenges.": "q3",
+  "I bring value to the lives of others.": "q4",
+  "I have talents and strengths.": "q5",
+  "I am a kind and compassionate person.": "q6",
+  "I make a positive impact on those around me.": "q7",
+  "I am worthy of love and respect.": "q8",
+  "I am continuously improving and bettering myself.": "q9",
+  "I am confident in my abilities.": "q10",
+  "I have the power to make a difference in the world.": "q11",
+  "I am grateful for who I am and what I have.": "q12",
+  "I am in control of my thoughts and emotions.": "q13",
+  "I radiate positivity and attract good energy.": "q14",
+  "I deserve success and happiness.": "q15",
+  "I embrace new opportunities.": "q16",
+  "I am beautiful inside and out.": "q17",
+  "I am creative and innovative.": "q18",
+  "I am calm and composed under pressure.": "q19",
+  "I am proud of my accomplishments.": "q20"
+};
 
+// LEVEL 2 QUESTIONS
 
-  //LEVEL 2 QUESTIONS
-
-
-Map<String,String> questions_2 = {
-  "I procrastinate on important tasks":"q21",
-  "Acknowledging the need for better time management":"q22",
-  "I sometimes lack self-confidence":"q23",
-  "Realizing the need to work on self-esteem":"q24",
-  "I struggle with maintaing focus":"q25",
-  "I avoid confrontation, even when it's necessary":"q26",
-  "I find it hard to forgive and let go of grudges":"q27",
-  "I have fear of failure that holds me back":"q28",
-  "I tend to get easily frustrated or impatient":"q29",
-  "I sometimes neglect self-care or wellness":"q30",
-  "I don't always listen well to others":"q31",
-  "I resist change, even when it's beneficial":"q32",
-  "I find it hard to express my emotions clearly":"q33",
-  "I can be indecisive, especially under pressure":"q34",
-  "I avoid taking risks, even when they could lead to growth":"q35",
-  "I sometimes prioritize others' opinions over my own":"q36",
-  "I can be overly critical of myself and others":"q37",
-  "Things are not good":"q38",
-  "Mostly I feel happy when bullying friends":"q39",
-  "I am more Egoistic person":"q40"
-  
- 
-  };
+Map<String, String> questions_2 = {
+  "I procrastinate (Postpone) on important tasks.": "q21",
+  "I acknowledge the need for better time management.": "q22",
+  "I sometimes lack self-confidence.": "q23",
+  "I realize the need to work on self-esteem.": "q24",
+  "I struggle with maintaining focus.": "q25",
+  "I avoid confrontation, even when it's necessary.": "q26",
+  "I find it hard to forgive and let go of grudges.": "q27",
+  "I have a fear of failure that holds me back.": "q28",
+  "I tend to get easily frustrated or impatient.": "q29",
+  "I sometimes neglect self-care or wellness.": "q30",
+  "I don't always listen well to others.": "q31",
+  "I resist change, even when it's beneficial.": "q32",
+  "I find it hard to express my emotions clearly.": "q33",
+  "I can be indecisive, especially under pressure.": "q34",
+  "I avoid taking risks, even when they could lead to growth.": "q35",
+  "I sometimes prioritize others' opinions over my own.": "q36",
+  "I can be overly critical of myself and others.": "q37",
+  "Things are not good.": "q38",
+  "I mostly feel happy when bullying friends.": "q39",
+  "I am an egoistic person.": "q40"
+};
 
   void selectAnswer(int value) {
   
