@@ -90,7 +90,28 @@ class _ResultScreenState extends State<ResultScreen> {
                         SizedBox(height: 15),
 
 
-          if(quizController.level.value !=3)
+          if(quizController.score.value < 51)
+            SizedBox(
+              height: 50,
+              width: 200,
+              child: GradientButton(onPressed: (){
+                
+                  quizController.resetQuiz();
+                  if(quizController.level.value == 2){
+                  quizController.level.value = 1;
+                  quizController.scoresStorage.value.removeAt(0);
+                  Get.offAllNamed("/quizscreen");
+
+                  }else if(quizController.level.value == 3){
+                                      quizController.level.value = 2;
+                                                        quizController.scoresStorage.value.removeAt(1);
+
+                  Get.offAllNamed("/quizscreen");
+
+                  }
+                
+              }, text:  "Retry")),
+          if(quizController.level.value !=3 && quizController.score.value > 51)
             SizedBox(
               height: 50,
               width: 200,
@@ -100,7 +121,7 @@ class _ResultScreenState extends State<ResultScreen> {
                   Get.toNamed("/quizscreen");
                 }
               }, text:  "Level 2")),
-          if(quizController.level.value ==3)
+          if(quizController.level.value ==3 && quizController.score.value >51)
               SizedBox(
               height: 50,
               width: 200,
